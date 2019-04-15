@@ -44,3 +44,16 @@ info
 logs
 objects
 refs
+==========
+ git push -u origin master
+Fatal: AggregateException encountered.
+Username for 'https://github.com/deoops/myappsample1.git': deoops
+Counting objects: 23, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (23/23), 2.72 KiB | 0 bytes/s, done.
+Total 23 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/deoops/myappsample1.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
