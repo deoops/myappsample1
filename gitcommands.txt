@@ -1,0 +1,334 @@
+irst, list all branches that were merged in remote.
+
+git branch --merged
+You might see few branches you don't want to remove. we can add few arguments to skip important branches that we don't want to delete like master or a develop. The following command will skip master branch and anything that has dev in it.
+
+git branch --merged| egrep -v "(^\*|master|dev)"
+If you want to skip, you can add it to the egrep command like the following. The branch skip_branch_name will not be deleted.
+
+git branch --merged| egrep -v "(^\*|master|dev|skip_branch_name)"
+To delete all local branches that are already merged into the currently checked out branch:
+
+git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+You can see that master and dev are excluded in case they are an ancestor.
+
+You can delete a merged local branch with:
+
+git branch -d branchname
+git branch -D branchname
+To delete it from the remote in old versions of Git use:
+
+git push origin :branchname
+In more recent versions of Git use:
+
+git push --delete origin branchname
+Once you delete the branch from the remote, you can prune to get rid of remote tracking branches with:
+
+git remote prune origin
+or prune individual remote tracking branches, as the other answer suggests, with:
+
+git branch -dr branchname
+
+==========================================
+GIT COMMANDS
+    1  ssh -i 'c:\Users\munis\.ssh\MyFirstKeyp.pem' ec2-user@18.222.196.185
+    2  ssh -i 'c:\Users\munis\.ssh\MyFirstKeyp.pem' ec2-user@18.222.196.185
+    3  pwd
+    4  mkdrk file1
+    5  cd desktop
+    6  ls
+    7  cd users munis
+    8  cd
+    9  ls
+   10  ssh -i 'c:\Users\munis\.ssh\padmajaKey.pem' ec2-user@18.217.209.9
+   11  ssh-keygen -t rsa -b 4096 -C "kvd.chowdary@gmail.com"
+   12  ssh-keygen -t rsa -b 4096 -C "kvd.chowdary@gmail.com"
+   13  eval $(ssh-agent -s)
+   14  ssh-add ~/.ssh/kvd
+   15  ssh-add ~/.ssh/id_rsa
+   16  clip < ~/.ssh/kvd.pub
+   17  clip < ~/.ssh/id_rsa.pub
+   18  pwd
+   19  ls
+   20  pwd
+   21  cd .ssh
+   22  ls
+   23  ls -lrt
+   24  pwd
+   25  cd ..
+   26  pwd
+   27  ls -la kvd
+   28  cd kvd
+   29  ls -la
+   30  pwd
+   31  cd ..
+   32  ls
+   33  ls -la
+   34  cd muni
+   35  cd munis
+   36  pwd
+   37  ls
+   38  cd .ssh
+   39  pwd
+   40  ls -la
+   41  pwd
+   42  ls -la
+   43  pwd
+   44  cd ..
+   45  ssh-keygen -t rsa -b 4096 -C "kvd.chowdary@gmail.com"
+   46  eval $(ssh-agent -s)
+   47  ssh-add ~/.ssh/kvdid_rsa
+   48  clip < ~/.ssh/kvdid_rsa.pub
+   49  pwd
+   50  ls
+   51  pwd
+   52  ls -la
+   53  cd C:\Users\munis\Desktop\Venkat\GIT Training
+   54  pwd
+   55  cd Desktop
+   56  cd Venkat/GIT\ Training/
+   57  ls -la
+   58  git status
+   59  clear
+   60  pwd
+   61  ls -la
+   62  git status
+   63  git branches
+   64  git branch
+   65  git branches -r
+   66  git branch -r
+   67  git branch -v
+   68  git merge
+   69  git merges
+   70  git merge
+   71  git branches -a
+   72  git branch -a
+   73  clear
+   74  git branch -a
+   75  git branch -v
+   76  git branch -r
+   77  git status
+   78  clear
+   79  git branch -r
+   80  git config -list
+   81  git config --list
+   82  git log
+   83  clear
+   84  git branch -v
+   85  git rm --caches file5
+   86  git rm --cache file5
+   87  git status
+   88  git branch -v
+   89  git brancg -a
+   90  git branch -a
+   91  git branch -r
+   92  git branch -b
+   93  git log -p
+   94  clear
+   95  git branch
+   96  git log master
+   97  clear
+   98  git log login
+   99  git log file5
+  100  cd C:\Users\munis\Desktop\Venkat\GIT Training
+  101  cd C:\Users\munis\Desktop\Venkat\
+  102  cd C:\Users\munis\Desktop\Venkat
+  103  pwd
+  104  cd Desktop
+  105  cd Venkat
+  106  la -la
+  107  ls -la
+  108  cd GIT\ Training/
+  109  pwd
+  110  ls -la
+  111  pwd
+  112  git status
+  113  ls -la
+  114  git bracnhe
+  115  git branch
+  116  gir -r branch
+  117  git -r branch
+  118  git branch -r
+  119  git branch -v
+  120  git branch -a
+  121  git merges
+  122  git merge
+  123  git --help
+  124  clear
+  125  gir branch
+  126  git branch
+  127  git branch -a
+  128  git log master
+  129  clear
+  130  git branch
+  131  pwd
+  132  ls -la
+  133  clear
+  134  git branches -v
+  135  git branch -v
+  136  git branch -a
+  137  git branch --merged
+  138  git branch --no merged
+  139  git branch --no-merged
+  140  clear
+  141  git branch -a
+  142  git branch -r
+  143  git branch --merged
+  144  git branch --no-merged
+  145  git checkout login
+  146  git add .
+  147  git tstu
+  148  git status
+  149  git checkout login
+  150  git branch --merged
+  151  git branch --no-merged
+  152  git stash
+  153  git branch --merged master
+  154  git checkout master
+  155  ls -la
+  156  cler
+  157  clear
+  158  git branch --merged master
+  159  git branch --merged sudo
+  160  git branch --merged login
+  161  git checkout login
+  162  git checkout --merged
+  163  git branch --merged
+  164  git branch --no-merged
+  165  git branch --no-merged master
+  166  git branch --merged
+  167  git branch --merged master
+  168  pwd
+  169  ls -la
+  170  clear
+  171  git branch --merged | grep "\*"
+  172  git checkout master
+  173  git branch --merged | grep "\*"
+  174  git branch --merged | grep -v "\*"
+  175  git branch --merged
+  176  git remote prune origin --dry-run
+  177  git status
+  178  git rm --cached file5
+  179  git status
+  180  git add .
+  181  git status
+  182  git checout -r
+  183  git checkout -r
+  184  git branch -r
+  185  git remote
+  186  git remote -v
+  187  git remote show origin
+  188  git last
+  189  git status
+  190  git status -s
+  191  git diff staged
+  192  git diff stagged
+  193  git diff --stagged
+  194  git diff --staged
+  195  git log --stat
+  196  git log
+  197  git log --pretty
+  198  git log --since==2 weeks
+  199  git log --since==2.weeks
+  200  git log --since==2.months
+  201  git checkoou login
+  202  git checkout login
+  203  mkfir dir21
+  204  mkdir dir21
+  205  ls  -la
+  206  cat file21 >>
+  207  cat >> file21
+  208  less file21
+  209  vi file21
+  210  git add file21
+  211  git status
+  212  git commit -m"added file21"
+  213  git sttus
+  214  git status
+  215  git log -p -2
+  216  git log login
+  217  vi file21
+  218  gitcommit --amend
+  219  git commit --amend
+  220  git log login
+  221  git re,ote show origin
+  222  git remote show origin
+  223  graph -p
+  224  graph --oneline --decorative --graph
+  225  git graph --oneline --decorative --graph
+  226  git graph --oneline --decorative
+  227  git branch
+  228  git chekout dev
+  229  git checkout dev
+  230  git stash save
+  231  git stash list
+  232  git stash apply stash@{0}
+  233  git status
+  234  git checkout dev
+  235  git stash save
+  236  git graph
+  237  git graph --decorative --oneline
+  238  git log --decorative --oneline
+  239  git log --decorate --oneline
+  240  alias graph=git log --decorate --oneline --graph
+  241  alias graph=git log --alias --decorate --oneline --graph
+  242  git checkout dev
+  243  ls -la
+  244  git status
+  245  git log --decorate
+  246  git log --decorate --oneline --graph
+  247  alias graph=git log --alias --decorate --oneline --graph
+  248  alias graph=git log --all --decorate --oneline --graph
+  249  clear
+  250  alias graph git log --all --decorate --oneline --graph
+  251  alias graph= git log --all --decorate --oneline --graph
+  252  alias graph git log --all --decorate --oneline --graph
+  253  clear
+  254  git remote show
+  255  git branch -r
+  256  git  push --set-upstream origin dev
+  257  git  push --set-upstream origin dev
+  258  git --config
+  259  git  push --set-upstream origin dev
+  260  git remote
+  261  git branch
+  262  git branch -r
+  263  git remote
+  264  ls -la
+  265  git branch
+  266  git push --set-upstream origin login
+  267  git log graph
+  268  clear
+  269  git remote -v
+  270  git remote
+  271  git branch -r
+  272  history
+  273  git remote show
+  274  git remote
+  275  git remote -v
+  276  git branch -r
+  277   git graph --decorative --oneline
+  278  git log dev
+  279  vi file5
+  280  vi file6
+  281  git status
+  282  ls -la
+  283  git add .
+  284  git status
+  285  git diff file5
+  286  git commit -m" added file5&6"
+  287  git log dev
+  288  git log dev -2
+  289  git tree
+  290  git log --oneline --decorate --all --graph
+  291  git branch -r --merged
+  292  git branch -r
+  293  git remote show
+  294  git remote -v
+  295  it-sweep preview --master
+  296  git-sweep preview --master
+  297  git-sweep preview
+  298  git branch --merged
+  299  git branches--no-merge
+  300  git branch --no-merge
+  301  git branch --merge
